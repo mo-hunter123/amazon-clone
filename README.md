@@ -6,7 +6,7 @@ short Description
 ------------------
 
 ### Front-end
-<p>Built an amazon clone built front-end with React, using Context apis and redux to manage our app's state </p>
+<p>Built an amazon clone creating front-end with React, using Context apis and redux to manage our app's state </p>
 
 ### Back-end
 <p> Used Node to provide the backend environment for the app and Express to handle requests, controllers and models </p>
@@ -41,16 +41,16 @@ short Description
 
 #### front-end 
 
-`npm start`
+    `npm start`
 
 #### back-end 
 
-`cd amazon-backend`
-`nodemon app.js`
+    `cd amazon-backend`
+    `nodemon app.js`
 
 #### DataBase 
 
-`cd amazon-backend/models`
+    `cd amazon-backend/models`
 
 then you can import the `requests.sql` file to your local MySQL database 
 
