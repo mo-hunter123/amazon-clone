@@ -4,8 +4,7 @@
 //update a product by id 
 //remove a product 
 //remove all products 
-
-import conn from "./dbConfig";
+const conn = require('./dbConfig')
 
 const Product = function(product) { 
     this.title = product.title; 
@@ -43,7 +42,7 @@ Product.findById = (productId, result) => {
         }
 
         //case no product found 
-        result({kind: "Product not found"}, null);
+        result({kind: "not found"}, null);
     })
 }
 
@@ -61,6 +60,24 @@ Product.getAll = result => {
     })
 }
 
+Product.updateById = (productId, productData, result) => {
+    conn.query("UPDATE products SET title = ?, image = ?, price = ?, rating = ? WHERE id = ?", [productData.title, productData.image, productData.price, productData.rating, productId], (err, res) => {
+        if(err) {
+            console.log(`Error: ${err}`);
+            result(err, null);
+            return; 
+        }
+
+        if(res.affectedRows == 0) {
+            result({kind: "not found"}, null)
+            return
+        }
+
+        console.log("updated product ", {id: id, ...productData})
+        result(null, {id: id, ...productData})
+    })
+}
 
 
-export default Product
+
+module.exports = Product

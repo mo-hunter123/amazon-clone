@@ -1,11 +1,11 @@
-import mysql from 'mysql'
+const mysql = require('mysql')
 
 
 const conn = mysql.createConnection({
     host: "localhost", 
     user: "root", 
     password: "", 
-    database: "projectDB"
+    database: "amazon-db"
 })
 
 
@@ -14,4 +14,4 @@ conn.connect((err) => {
     console.log("database connected")
 })
 
-export default conn
+module.exports = conn

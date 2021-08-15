@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 myToken.txt
+
+/amazon-backend/node_modules
