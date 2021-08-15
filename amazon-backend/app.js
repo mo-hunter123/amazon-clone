@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 // parse requests of content-type: application/x-www-from-urlencoded
 app.use(bodyParser.urlencoded({extended: true}))
 
+app.use(cors())
 
 app.get('/', (req, res) => {
     res.json({message: "Hello world"})
@@ -22,7 +23,7 @@ app.get('/', (req, res) => {
 app.post("/products", products.create); 
 
 //find a special product 
-app.get("/products/:productId", products.findById); 
+app.get("/products/:productId", cors(), products.findById); 
 
 //get all products 
 app.get("/products", products.getAll);

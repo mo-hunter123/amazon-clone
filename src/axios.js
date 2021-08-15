@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-const instance = axios.create({
-    baseUrl: "http://localhost:9000"
+export default axios.create({
+    baseURL: "http://localhost:9000",
+    headers: {
+        "Content-type": "application/json"
+    }
 })
-
-export default instance

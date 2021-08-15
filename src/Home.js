@@ -3,7 +3,6 @@ import Product from './Product'
 import './Home.css'
 
 function Home({products}) {
-    var tester = 0; 
 
     return (
         <div className="home">
