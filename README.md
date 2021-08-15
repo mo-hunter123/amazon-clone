@@ -9,7 +9,8 @@ short Description
 <p>Built an amazon clone creating front-end with React, using Context apis and redux to manage our app's state </p>
 
 ### Back-end
-<p> Used Node to provide the backend environment for the app and Express to handle requests, controllers and models </p>
+<p> create Node.js Rest API with an Express web server </p>
+<p> Built model, controllers and routes to handle all CRUD operations </p>
 
 
 ### DataBase

@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const bodyParser = require('body-parser');
 const products = require("./controllers/product.controller")
 
@@ -10,6 +11,7 @@ app.use(bodyParser.json());
 
 // parse requests of content-type: application/x-www-from-urlencoded
 app.use(bodyParser.urlencoded({extended: true}))
+
 
 app.get('/', (req, res) => {
     res.json({message: "Hello world"})
