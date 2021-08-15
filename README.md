@@ -33,9 +33,9 @@ short Description
 
 ### Install
 
-`git clone https://github.com/mo-hunter123/amazon-clone`
-`cd amazon-clone`
-`npm install`
+    `git clone https://github.com/mo-hunter123/amazon-clone`
+    `cd amazon-clone`
+    `npm install`
 
 ### Run the app 
 
