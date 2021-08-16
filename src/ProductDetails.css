@@ -1,0 +1,8 @@
+.productdetails{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.productdetails_center{
+    width: 25%;
+}
